@@ -306,11 +306,15 @@ body {
   border-radius: 5px;
 }
 
-/* ===== WORK =====*/
+/* ===== WORK ===== */
 .work__container {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+}
+
+.work__item {
+  text-align: center; /* Center-align the title under the image */
 }
 
 .work__img {
@@ -329,29 +333,39 @@ body {
 }
 
 /* Make the last 2 images span the full width of the three columns on the second row */
-.work__container .work__img:nth-child(4) {
+.work__container .work__item:nth-child(4) {
   grid-column: 1 / span 2; /* Span across two columns */
 }
 
-.work__container .work__img:nth-child(5) {
+.work__container .work__item:nth-child(5) {
   grid-column: 3 / span 1; /* Start from the third column */
 }
 
 /* Set specific heights for the first 3 images to be smaller */
-.work__container .work__img:nth-child(1) img,
-.work__container .work__img:nth-child(2) img,
-.work__container .work__img:nth-child(3) img {
+.work__container .work__item:nth-child(1) img,
+.work__container .work__item:nth-child(2) img,
+.work__container .work__item:nth-child(3) img {
   height: 150px; /* Set a specific height for the first row images */
   object-fit: cover; /* Ensure the image covers the container */
 }
 
 /* Set specific heights for the 4th and 5th images to be larger */
-.work__container .work__img:nth-child(4) img,
-.work__container .work__img:nth-child(5) img {
+.work__container .work__item:nth-child(4) img,
+.work__container .work__item:nth-child(5) img {
   height: 200px; /* Set a larger height for the second row images */
   object-fit: cover; /* Ensure the image covers the container */
 }
 
+/* Title styling */
+.work__title {
+  margin-top: 1rem; /* Space between image and title */
+  font-size: 1rem;
+  color: #fff; /* White text color */
+  background-color: #0a41b0; /* Blue background color */
+  padding: 0.5rem 1rem; /* Padding around the text */
+  border-radius: 0.5rem; /* Rounded corners */
+  display: inline-block; /* Make the background fit the text */
+}
 
 
 
